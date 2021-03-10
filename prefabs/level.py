@@ -2,13 +2,14 @@ from ursina import *
 
 
 class Level:
-    def __init__(self, name, description, next=None):
+    def __init__(self, name, description, lang, next=None):
         self.name = name
         self.description = description
         self.next = next
+        self.lang = lang
 
         self.entities = {}
 
     def unLoad(self):
-        for i, e in self.entities:
-            destroy(e)
+        for e in self.entities:
+            destroy(self.entities[e])
