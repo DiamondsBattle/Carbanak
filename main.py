@@ -1,15 +1,15 @@
 from ursina import *
-from lvls.lvl0 import Level0
+from lvls.lvl0.lvl0 import Level0
 
 
-class Carbanak:
+class Carbanak(Ursina):
     def __init__(self):
-        self.app = Ursina()
+        super().__init__()
 
         self.getLevels()
-        self.level = self.levels['lvl0']()
+        self.level = self.levels['lvl0'](lang='en')
 
-        self.app.run()
+        self.run()
 
     def getLevels(self):
         self.levels = {
@@ -19,8 +19,10 @@ class Carbanak:
     def input(self, key):
         if key == 'a':
             self.level.unLoad()
-            if self.level.next:
-                self.level = self.levels[self.level.next]
+            try:
+                self.level = self.levels[self.level.next](lang='en')
+            except Exception:
+                print(f'No level after {self.level.name}')
 
 
 if __name__ == '__main__':
