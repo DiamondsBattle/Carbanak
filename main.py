@@ -1,15 +1,26 @@
 from ursina import *
-from prefabs.screen import Screen
+from lvls.lvl0 import Level0
 
 
 class Carbanak:
     def __init__(self):
         self.app = Ursina()
 
-        self.postInit()
+        self.getLevels()
+        self.level = self.levels['lvl0']()
 
-    def postInit(self):
         self.app.run()
+
+    def getLevels(self):
+        self.levels = {
+            'lvl0': Level0
+        }
+
+    def input(self, key):
+        if key == 'a':
+            self.level.unLoad()
+            if self.level.next:
+                self.level = self.levels[self.level.next]
 
 
 if __name__ == '__main__':
