@@ -1,19 +1,30 @@
 {
-  "fr": [
-
-  ],
-  "en": [
-    "You are Alexandro Van Dart...",
-    "An Europol employee at the cybercriminality department...",
-    "You have at your disposal a computer...",
-    "You also have a note block...",
-    "Which you will use to take notes on what your hear and see...",
-    "You will have a complete panoply off softwares for any of your uses...",
-    "Bulb is used to reverse engineer a malware to optain information on it...",
-    "Citadel is used to scan and clean a computer for malwares...",
-    "Thor is used to navigate on the Darkweb and doggy forums...",
-    "Firecat allows you to go on Internet and any legal site...",
-    "To write code you will need to use Wow Text...",
-    "And finally, to secure a computer and it's network, you can use IceWall..."
-  ]
+  "fr": {
+    "Vous êtes Alexandro Van Dart...": 0,
+    "Un employé d'Europol au département de cybercriminalité...": 0,
+    "Vous avez à votre disposition un ordinateur...": 0,
+    "Vous avez aussi un block-note...": 0,
+    "Que vous utiliserez pour prendre des notes sur ce que vous voyez et entendez...": 0,
+    "You aurez une panoplie complète d'outils pour toutes les utilisations...": 0,
+    "Bulb est utilisé pour décompiler le code d'un malware pour en tirer des informations...": 0,
+    "Citadel est utilisé pour scanner et supprimer les malwares ...": 0,
+    "Thor est utilisé pour aller sur le Dark Web et les sites douteux...": 0,
+    "Firecat permet d'aller sur tout site légal...": 0,
+    "Pour écrire du code, vous devrez utiliser Wow Text...": 0,
+    "Enfin, pour sécuriser un ordinateur et son réseau, vous devez utiliser IceWall...": 0
+  },
+  "en": {
+    "You are Alexandro Van Dart...": 0,
+    "An Europol employee at the cybercriminality department...": 0,
+    "You have at your disposal a computer...": 0,
+    "You also have a note block...": 0,
+    "Which you will use to take notes on what your hear and see...": 0,
+    "You will have a complete panoply off softwares for any of your uses...": 0,
+    "Bulb is used to reverse engineer a malware to optain information on it...": 0,
+    "Citadel is used to scan and clean a computer for malwares...": 0,
+    "Thor is used to navigate on the Darkweb and doggy forums...": 0,
+    "Firecat allows you to go on Internet and any legal site...": 0,
+    "To write code you will need to use Wow Text...": 0,
+    "And finally, to secure a computer and it's network, you can use IceWall...": 0
+  }
 }
