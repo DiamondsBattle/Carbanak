@@ -7,7 +7,7 @@ class Carbanak(Ursina):
         super().__init__()
 
         self.getLevels()
-        self.level = self.levels['lvl0'](lang='en')
+        self.level = self.levels['lvl0'](lang='fr')
 
         self.run()
 
