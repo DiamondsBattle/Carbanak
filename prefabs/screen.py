@@ -1,5 +1,6 @@
 from ursina import *
 
+
 class Screen(Entity):
     def __init__(self, **kwargs):
         self.scale_xy = (
