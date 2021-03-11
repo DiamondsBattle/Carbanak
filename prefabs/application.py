@@ -8,12 +8,8 @@ class Application:
         self.icon = icon
         self.data = data
 
-        self.ent_icon = Button(
-            model='quad',
+        self.ent_icon = Icon(
             texture=self.icon,
-            scale=Vec2(.15, .1),
-            always_on_top=True,
-            color=color.white
         )
         self.ent_text = Text(
             # parent=self.ent_icon,
@@ -32,6 +28,23 @@ class Application:
     @enabled.setter
     def enabled(self, value):
         self.ent_icon.enabled = value
+
+
+class Icon(Entity):
+    def __init__(self, **kwargs):
+        super().__init__(
+            model='quad',
+            scale=Vec2(.15, .1),
+            always_on_top=True,
+            color=color.white,
+            **kwargs
+        )
+
+    def on_hover(self):
+        self.color = color.white33
+
+    def on_click(self):
+        self.color = color.blue
 
 
 class Bulb(Application):
