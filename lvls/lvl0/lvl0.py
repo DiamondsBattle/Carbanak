@@ -3,8 +3,9 @@ from prefabs.level import Level
 from prefabs.screen import Screen
 from prefabs.halo import Halo
 from prefabs.script import Script
+from prefabs.application import *
 
-from ursina import invoke, window, Vec2
+from ursina import invoke, window, Vec2, Func
 from json import loads
 
 
@@ -25,14 +26,17 @@ class Level0(Level):
             'halo': Halo(),
             'script': Script(
                 script=self.script,
-                position=Vec2(0, -.5),
+                position=window.bottom,  # TODO : window.bottom (ursina)
                 origin=(0, -.5)
-            )
+            ),
+            'bulb': Bulb()
         }
 
         for i in self.entities:
             self.entities[i].enabled = False
+        self.entities['bulb'].enabled = True
 
         self.entities['script'].enabled = True
 
-        invoke(setattr, self.entities['screen'], 'enabled', True, delay=3)
+        invoke(setattr, self.entities['screen'], 'enabled', True, delay=1)
+        invoke(setattr, self.entities['bulb'], 'enabled', True)
