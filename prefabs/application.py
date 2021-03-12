@@ -12,7 +12,6 @@ class Application:
             texture=self.icon,
         )
         self.ent_text = Text(
-            # parent=self.ent_icon,
             text=self.name,
             origin=(0, 0),
             position=self.ent_icon.position,
@@ -28,22 +27,28 @@ class Application:
     @enabled.setter
     def enabled(self, value):
         self.ent_icon.enabled = value
+        self.ent_text.enabled = value
 
 
-class Icon(Entity):
+class Icon(Button):
     def __init__(self, **kwargs):
         super().__init__(
-            model='quad',
             scale=Vec2(.15, .1),
             always_on_top=True,
             color=color.white,
             **kwargs
         )
 
+    def update(self):
+        if self.hovered:
+            self.on_hover()
+        else:
+            self.color = color.white
+
     def on_hover(self):
         self.color = color.white33
 
-    def on_click(self):
+    def click(self):
         self.color = color.blue
 
 
