@@ -26,7 +26,7 @@ class Level0(Level):
             'halo': Halo(),
             'script': Script(
                 script=self.script,
-                position=window.bottom,  # TODO : window.bottom (ursina)
+                position=window.bottom,
                 origin=(0, -.5)
             ),
             'bulb': Bulb()
@@ -34,9 +34,9 @@ class Level0(Level):
 
         for i in self.entities:
             self.entities[i].enabled = False
-        self.entities['bulb'].enabled = True
 
+        self.entities['bulb'].enabled = True
         self.entities['script'].enabled = True
 
-        invoke(setattr, self.entities['screen'], 'enabled', True, delay=1)
+        # invoke(setattr, self.entities['screen'], 'enabled', True, delay=1)
         invoke(setattr, self.entities['bulb'], 'enabled', True)
