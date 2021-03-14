@@ -17,7 +17,7 @@ class Script(Text):
             self.n += 1
             if self.n == self.current + 1:
                 self.text = i
-                invoke(self.changeScript, delay=4)
+                invoke(self.changeScript, delay=5)
                 self.appear(speed=self.speed)
 
         if self.n < self.current + 1:
