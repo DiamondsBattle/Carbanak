@@ -36,6 +36,7 @@ class Icon(Button):
             scale=Vec2(.15, .1),
             always_on_top=True,
             color=color.white,
+            on_click=self.click,
             **kwargs
         )
 
@@ -56,7 +57,7 @@ class Bulb(Application):
     def __init__(self):
         super().__init__(
             name='Bulb',
-            description='Bulb is used to reverse engineer a malware to optain information on it',
+            description='Bulb is used to reverse engineer a malware to obtain information on it',
             icon='bulb',
             data='None'
         )
