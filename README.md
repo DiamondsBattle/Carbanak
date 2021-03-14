@@ -91,11 +91,14 @@ For this you will have at your disposal a large variety of tools provided by the
 * Description : Unknown, probably downloaded from the internet or in a phishing mail.
 * \-\-\-\-\-\-\-\-\-\-
 * Name : OI.boy
-* Path : *C:\Programs\Lindows\Drivers\packages\x64\data\src\oi.boy*
+* Path : *C:\Lindows\Drivers\packages\x64\data\src\oi.boy*
 * Situation : Author not arrested
 * Description : Acts like a driver to gain access to the keyboard inputs before saving it, and submitting it to an IA that extracts important strings and sends them to the author.
-* You need click on *kill* next to the Carbanak malware (or even all of them).
+* You need to click on *kill* next to the Carbanak malware (or even all of them).
 * You need to take notes on the Carbanak malware.
+
+**Mission 1.b** : 
+
 
 ### TODO
 * Make Wow Text UI
@@ -124,3 +127,5 @@ For this you will have at your disposal a large variety of tools provided by the
 * Each site must have :
 1. An IP
 2. A content (``Text`` with the website's text)
+3. A title
+4. A locked or not status (for further needed progress)
