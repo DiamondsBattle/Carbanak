@@ -10,6 +10,7 @@ class Application:
 
         self.ent_icon = Icon(
             texture=self.icon,
+            on_click=Func(print, 'ok')
         )
         self.ent_text = Text(
             text=self.name,
@@ -36,7 +37,7 @@ class Icon(Button):
             scale=Vec2(.15, .1),
             always_on_top=True,
             color=color.white,
-            on_click=self.click,
+            # on_click=self.click,
             **kwargs
         )
 

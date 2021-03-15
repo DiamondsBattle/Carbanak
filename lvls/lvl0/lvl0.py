@@ -29,7 +29,7 @@ class Level0(Level):
                 position=window.bottom,
                 origin=(0, -.5)
             ),
-            'bulb': Bulb()
+            'bulb': Application(icon='bulb', name='Bulb', data='', description='')
         }
 
         for i in self.entities:
