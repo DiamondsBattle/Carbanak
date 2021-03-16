@@ -12,6 +12,7 @@ class Application:
             texture=self.icon,
             on_click=Func(print, 'ok')
         )
+        print(self.ent_icon.on_click)
         self.ent_text = Text(
             text=self.name,
             origin=(0, 0),
@@ -29,6 +30,11 @@ class Application:
     def enabled(self, value):
         self.ent_icon.enabled = value
         self.ent_text.enabled = value
+
+    def destroy(self):
+        destroy(self.ent_icon)
+        destroy(self.ent_text)
+        del self
 
 
 class Icon(Button):
