@@ -24,6 +24,11 @@ class Carbanak(Ursina):
             except Exception:
                 print(f'No level after {self.level.name}')
 
+    def update(self):
+        print('ok')
+        if self.level:
+            self.level.update()
+
 
 if __name__ == '__main__':
     app = Carbanak()

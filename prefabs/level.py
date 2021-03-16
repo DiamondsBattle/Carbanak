@@ -1,4 +1,5 @@
 from ursina import *
+from prefabs.application import Application
 
 
 class Level:
@@ -12,4 +13,10 @@ class Level:
 
     def unLoad(self):
         for e in self.entities:
-            destroy(self.entities[e])
+            if isinstance(e, Entity):
+                destroy(self.entities[e])
+            elif isinstance(e, Application):
+                e.destroy()
+
+    def update(self):
+        pass
