@@ -29,7 +29,10 @@ class Level0(Level):
                 position=window.bottom,
                 origin=(0, -.5)
             ),
-            'bulb': Application(icon='bulb', name='Bulb', data='', description='')
+            'bulb': Application(icon='bulb',
+                                name='Bulb',
+                                data='',
+                                description='')
         }
 
         for i in self.entities:
@@ -40,3 +43,6 @@ class Level0(Level):
 
         # invoke(setattr, self.entities['screen'], 'enabled', True, delay=1)
         invoke(setattr, self.entities['bulb'], 'enabled', True)
+
+    def update(self):
+        print(self.entities['bulb'].ent_icon.enabled)
