@@ -6,18 +6,19 @@ class Carbanak(Ursina):
     def __init__(self):
         super().__init__()
 
-        self.getLevels()
-        self.level = self.levels['lvl0'](lang='fr')
+        self.levels = self.getLevels()
+        self.level = self.levels['lvl0'](lang='en')
 
         self.run()
 
     def getLevels(self):
-        self.levels = {
+        return {
             'lvl0': Level0
         }
 
+    @super.input()
     def input(self, key):
-        if key == 'a':
+        if key == 'x':
             self.level.unLoad()
             try:
                 self.level = self.levels[self.level.next](lang='en')
