@@ -9,8 +9,6 @@ from ursina import invoke, window, Vec2, Func
 from json import loads
 
 
-# TEST
-
 class Level0(Level):
     def __init__(self, **kwargs):
         super().__init__(
