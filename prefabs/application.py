@@ -10,9 +10,7 @@ class Application:
 
         self.ent_icon = Icon(
             texture=self.icon,
-            on_click=Func(print, 'ok')
         )
-        print(self.ent_icon.on_click)
         self.ent_text = Text(
             text=self.name,
             origin=(0, 0),
@@ -30,6 +28,7 @@ class Application:
     def enabled(self, value):
         self.ent_icon.enabled = value
         self.ent_text.enabled = value
+        print(self.ent_icon.enabled)
 
     def destroy(self):
         destroy(self.ent_icon)
@@ -42,21 +41,25 @@ class Icon(Button):
         super().__init__(
             scale=Vec2(.15, .1),
             always_on_top=True,
+            model='quad',
             color=color.white,
             # on_click=self.click,
             **kwargs
         )
+        self._on_click = self.click
 
     def update(self):
-        if self.hovered:
-            self.on_hover()
-        else:
-            self.color = color.white
+        pass
+        # if self.hovered:
+        #     self.on_hover()
+        # else:
+        #     self.color = color.white
 
-    def on_hover(self):
+    def hover(self):
         self.color = color.white33
 
     def click(self):
+        print('ok')
         self.color = color.blue
 
 
