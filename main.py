@@ -16,7 +16,7 @@ class Carbanak(Ursina):
             'lvl0': Level0
         }
 
-    @super.input() # TODO : FIX
+    # @super.input() # TODO : FIX
     def input(self, key):
         if key == 'x':
             self.level.unLoad()
