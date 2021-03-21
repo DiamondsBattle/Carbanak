@@ -41,8 +41,8 @@ class Level0(Level):
         self.entities['bulb'].enabled = True
         self.entities['script'].enabled = True
 
-        # invoke(setattr, self.entities['screen'], 'enabled', True, delay=1)
+        invoke(setattr, self.entities['screen'], 'enabled', True, delay=1)
         invoke(setattr, self.entities['bulb'], 'enabled', True)
 
     def update(self):
-        print(self.entities['bulb'].ent_icon.enabled)
+        pass
