@@ -6,8 +6,16 @@ class Carbanak(Ursina):
     def __init__(self):
         super().__init__()
 
+        self.entity = Entity(
+            update=self.update,
+        )
+
+        self.configs = {
+            'lang': 'fr'
+        }
+
         self.levels = self.getLevels()
-        self.level = self.levels['lvl0'](lang='en')
+        self.level = self.levels['lvl0'](lang=self.configs['lang'])
 
         self.run()
 
@@ -21,12 +29,11 @@ class Carbanak(Ursina):
         if key == 'x':
             self.level.unLoad()
             try:
-                self.level = self.levels[self.level.next](lang='en')
+                self.level = self.levels[self.level.next](lang=self.configs['lang'])
             except Exception:
                 print(f'No level after {self.level.name}')
 
     def update(self):
-        print('ok')
         if self.level:
             self.level.update()
 
