@@ -17,7 +17,7 @@ class Level0(Level):
             next='level1',
             **kwargs,
         )
-        with open('lvls/lvl0/text.json', 'r') as f:
+        with open('lvls/lvl0/text.json', 'r', encoding='utf-8') as f:
             data = loads(f.read())
         self.script = data[self.lang]
 
@@ -38,11 +38,33 @@ class Level0(Level):
         for i in self.entities:
             self.entities[i].enabled = False
 
-        self.entities['bulb'].enabled = True
         self.entities['script'].enabled = True
 
-        invoke(setattr, self.entities['screen'], 'enabled', True, delay=1)
-        invoke(setattr, self.entities['bulb'], 'enabled', True)
+        self.appear(self.entities['screen'], 10)
+        self.appear(self.entities['bulb'], 35)
+
+        # self.entities['screen'].color = color.black
+        # invoke(setattr, self.entities['screen'], 'enabled', True, delay=10)
+        # invoke(self.entities['screen'].animate, 'color', color.white, delay=10, duration=1.5)
+        #
+        # invoke(self.entities['screen'].animate, 'color', color.white, delay=10, duration=1.5)
+        # invoke(setattr, self.entities['bulb'], 'enabled', True, delay=35)
+        # invoke(self.entities['bulb'].animate, 'color', color.white, delay=10, duration=1.5)
+
+    def appear(self, e: Entity, d: int):
+        if isinstance(e, Application):
+            old_color = [e.ent_icon.color, e.ent_text.color]
+            e.color = color.black
+            invoke(setattr, e.ent_icon, 'enabled', True, delay=d)
+            invoke(e.ent_icon.animate, 'color', old_color[0], delay=d, duration=1.5)
+
+            invoke(setattr, e.ent_text, 'enabled', True, delay=d)
+            invoke(e.ent_text.animate, 'color', old_color[1], delay=d, duration=1.5)
+        else:
+            old_color = e.color
+            e.color = color.black
+            invoke(setattr, e, 'enabled', True, delay=d)
+            invoke(e.animate, 'color', old_color, delay=d, duration=1.5)
 
     def update(self):
-        pass
+        print(self.entities['screen'].color)

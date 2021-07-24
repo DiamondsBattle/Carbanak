@@ -15,7 +15,7 @@ class Application:
             text=self.name,
             origin=(0, 0),
             position=self.ent_icon.position,
-            y=(self.ent_icon.y - .8),
+            y=(self.ent_icon.y - .07),
             always_on_top=True,
             color=color.black,
         )
@@ -28,7 +28,19 @@ class Application:
     def enabled(self, value):
         self.ent_icon.enabled = value
         self.ent_text.enabled = value
-        print(self.ent_icon.enabled)
+
+    @property
+    def color(self):
+        return self.ent_icon.color
+
+    @color.setter
+    def color(self, value):
+        self.ent_icon.color = value
+        self.ent_text.color = value
+
+    def animate(self, **kwargs):
+        self.ent_icon.animate(**kwargs)
+        self.ent_text.animate(**kwargs)
 
     def destroy(self):
         destroy(self.ent_icon)
@@ -41,25 +53,21 @@ class Icon(Button):
         super().__init__(
             scale=Vec2(.15, .1),
             always_on_top=True,
-            model='quad',
             color=color.white,
-            # on_click=self.click,
+            on_click=self.click,
             **kwargs
         )
-        self._on_click = self.click
 
     def update(self):
-        pass
-        # if self.hovered:
-        #     self.on_hover()
-        # else:
-        #     self.color = color.white
+        if self.hovered:
+            self.hover()
+        else:
+            self.color = color.white
 
     def hover(self):
-        self.color = color.white33
+        self.color = color.white66
 
     def click(self):
-        print('ok')
         self.color = color.blue
 
 

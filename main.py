@@ -2,29 +2,24 @@ from ursina import *
 from lvls.lvl0.lvl0 import Level0
 
 
-class Carbanak(Ursina):
+class Carbanak(Entity):
     def __init__(self):
-        super().__init__()
-
-        self.entity = Entity(
-            update=self.update,
+        super().__init__(
+            eternal=True,
         )
 
         self.configs = {
-            'lang': 'fr'
+            'lang': 'en'
         }
 
         self.levels = self.getLevels()
         self.level = self.levels['lvl0'](lang=self.configs['lang'])
-
-        self.run()
 
     def getLevels(self):
         return {
             'lvl0': Level0
         }
 
-    # @super.input() # TODO : FIX
     def input(self, key):
         if key == 'x':
             self.level.unLoad()
@@ -39,4 +34,6 @@ class Carbanak(Ursina):
 
 
 if __name__ == '__main__':
+    env = Ursina()
     app = Carbanak()
+    env.run()
