@@ -9,7 +9,7 @@ class Carbanak(Entity):
         )
 
         self.configs = {
-            'lang': 'en'
+            'lang': 'fr'
         }
 
         self.levels = self.getLevels()

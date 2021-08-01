@@ -38,35 +38,41 @@ For this you will have at your disposal a large variety of tools provided by the
 * Voice talking :
 * You are Alexandro Van Dart... An Europol employee at the cybercriminality department... You have at your disposal a computer...
 * [Computer screen appears in the center of the screen, with standard wallpaper and no desktop icons, taking up 9:10 of the screen.]
-* You also have a note block...
-* [Note block appears in the bottom-right of the screen]
-* Which you will use to take notes on what your hear and see... You will have a complete panoply[panoplie] of softwares for any of your uses...
-* [Appears on screen the desktop icons of : Bulb, Citabel, Thor, Firecat, Wow Text, IceWall]
+* You also have a practical guide...
+* [Practical guide appears in the bottom-right of the screen]
+* In which new techniques and tips will be unlocked through out the progression... You will have a complete panoply[panoplie] of softwares for any of your uses...
+* [Appears on screen the desktop icon of Bulb]
+* [A golden halo appears around Bulb's desktop icon]
 * Bulb is used to reverse engineer a malware to optain information on it...
-* [A golden halo appears arround Bulb's desktop icon]
+* [The golden halo disappears around Bulb's desktop icon]
+* [Appears on screen the desktop icon of Citadel]
+* [A golden halo appears around Citadel's desktop icon]
 * Citadel is used to scan and clean a computer for malwares...
-* [The golden halo disappears arround Bulb's desktop icon]
-* [A golden halo appears arround Citadel's desktop icon]
+* [The golden halo disappears around Citadel's desktop icon]
+* [Appears on screen the desktop icon of Thor]
+* [A golden halo appears around Thor's desktop icon]
 * Thor is used to navigate on the Darkweb and doggy forums...
-* [The golden halo disappears arround Citadel's desktop icon]
-* [A golden halo appears arround Thor's desktop icon]
+* [The golden halo disappears around Thor's desktop icon]
+* [Appears on screen the desktop icon of Firecat]
+* [A golden halo appears around Firecat's desktop icon]
 * Firecat allows you to go on Internet and any legal site...
-* [The golden halo disappears arround Thor's desktop icon]
-* [A golden halo appears arround Firecat's desktop icon]
+* [The golden halo disappears around Firecat's desktop icon]
+* [Appears on screen the desktop icon of Wow Text]
+* [A golden halo appears around Wow Text's desktop icon]
 * To write code you will need to use Wow Text...
-* [The golden halo disappears arround Firecat's desktop icon]
-* [A golden halo appears arround Wow Text's desktop icon]
+* [The golden halo disappears around Wow Text's desktop icon]
+* [Appears on screen the desktop icon of IceWall]
+* [A golden halo appears around IceWall's desktop icon]
 * And finally, to secure a computer and it's network, you can use IceWall...
-* [The golden halo disappears arround Wow Text's desktop icon]
-* [A golden halo appears arround IceWall's desktop icon]
-* [4s Stop]
-* [The golden halo disappears arroung IceWall's desktop icon]
+* [The golden halo disappears around IceWall's desktop icon]
+* [ADD DESCRIPTION FOR CARBANAK]
+* Now, you are the only one who can track down the mastermind behind Carbanak...
 
 **Mission 1.a** : You have access to an employees screen.
 * You need to open *File Browser*.
 * You need to open *External Device (:E)*.
 * You need to open *Citadel.exe*.
-* You need to check your notes where you (should of) noted your credentials.
+* You need to check your practical guide to see your credentials.
 * You need to login with your credentials.
 * You need to click on *Scan*.
 * You will get a list of 4 malwares :

@@ -8,8 +8,18 @@ class Application:
         self.icon = icon
         self.data = data
 
+        standard_positions = {
+            'Bulb': Vec3(-.65, .28, 0),
+            'Citadel': Vec3(-.65, .03, 0),
+            'Thor': Vec3(-.65, -.24, 0),
+            'Firecat': Vec3(-.38, .28, 0),
+            'Wow Text 3': Vec3(-.38, .03, 0),
+            'IceWall': Vec3(-.38, -.24, 0)
+        }
+
         self.ent_icon = Icon(
             texture=self.icon,
+            position=standard_positions[self.name]
         )
         self.ent_text = Text(
             text=self.name,
@@ -22,7 +32,7 @@ class Application:
 
     @property
     def enabled(self):
-        return self.enabled
+        return self.ent_icon.enabled
 
     @enabled.setter
     def enabled(self, value):
@@ -52,6 +62,7 @@ class Icon(Button):
     def __init__(self, **kwargs):
         super().__init__(
             scale=Vec2(.15, .1),
+            model='quad',
             always_on_top=True,
             color=color.white,
             on_click=self.click,
@@ -61,6 +72,8 @@ class Icon(Button):
     def update(self):
         if self.hovered:
             self.hover()
+        elif self.color[3] != .66:
+            self.color = Vec4(1, 1, 1, self.color[3])
         else:
             self.color = color.white
 
@@ -75,7 +88,52 @@ class Bulb(Application):
     def __init__(self):
         super().__init__(
             name='Bulb',
-            description='Bulb is used to reverse engineer a malware to obtain information on it',
+            description='Software allowing reverse engineering of a malware to gather upon data on it\'s origin, makers, path and procedure',
             icon='bulb',
-            data='None'
+            data='None',
+        )
+
+class Citadel(Application):
+    def __init__(self):
+        super().__init__(
+            name='Citadel',
+            description='Software allowing a complete computer scan for Malwares',
+            icon='citadel',
+            data='None',
+        )
+
+class Thor(Application):
+    def __init__(self):
+        super().__init__(
+            name='Thor',
+            description='Software allowing to go on the DarkNet',
+            icon='thor',
+            data='None',
+        )
+
+class Firecat(Application):
+    def __init__(self):
+        super().__init__(
+            name='Firecat',
+            description='Software allowing to go on Internet',
+            icon='firecat2',
+            data='None',
+        )
+
+class WowText(Application):
+    def __init__(self):
+        super().__init__(
+            name='Wow Text 3',
+            description='Software allowing to write code',
+            icon='wow_text',
+            data='None',
+        )
+
+class IceWall(Application):
+    def __init__(self):
+        super().__init__(
+            name='IceWall',
+            description='Software allowing you to secure a network',
+            icon='icewall3',
+            data='None',
         )
